@@ -13,7 +13,7 @@ function App() {
     'discomfort',
     'headache',
     'abdominal pain',
-    'join pain',
+    'joint pain',
     'fatigue',
     'rapid breathing',
     'cough'
@@ -48,7 +48,7 @@ function App() {
       if (malariaCount > typhodCount) {
         setVerdict('I think you have Malaria. Please consult your doctor for further diagnosis.');
       } else if (typhodCount > malariaCount) {
-        setVerdict('I think you have Typhod. Please consult your doctor for further diagnosis.');
+        setVerdict('I think you have Typhoid. Please consult your doctor for further diagnosis.');
       } else {
         setVerdict('Hmm, i couldnt deduce your condition. Please try again and answer more accurately');
       }
