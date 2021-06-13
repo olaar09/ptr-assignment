@@ -20,12 +20,18 @@ function App() {
   ];
 
   const typhod = [
-    'cough',
+    'coughing',
     'appetite loss',
     'stomach pain',
     'weakness',
     'constipation',
-    'vomitting'
+    'vomitting',
+    'high body temperature.',
+    'mild rash on chest',
+    'intestinal bleeding',
+    'malaise',
+    'myalgia',
+    'delirium'
   ];
 
   const stages = [...typhod, ...malaria];
