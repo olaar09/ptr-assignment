@@ -8,14 +8,14 @@ function App() {
 
   const malaria = [
     'fever',
-    'rapidBreathing',
+    'rapid breathing',
     'chills',
     'discomfort',
     'headache',
     'abdominal pain',
     'joint pain',
     'fatigue',
-    'rapid breathing',
+    'rapid heart rate',
     'cough'
   ];
 
