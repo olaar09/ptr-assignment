@@ -89,17 +89,20 @@ function App() {
   return (
     <div className="App">
       <header style={{ padding: 30 }} className="App-header">
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <p>
-            Anefu Peter Oche - 201123034
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/nile.jpeg" style={{ width: 100, height: 100 }} />
+            <p>
+              Anefu Peter Oche - 201123034
           </p>
+          </div>
           <p>
             Malaria/Typhod Expert System
           </p>
         </div>
 
       </header>
-      {stage == -1 && !verdict && <div style={{ padding: 30 }}>
+      {stage === -1 && !verdict && <div style={{ padding: 30 }}>
         <h1>Instruction</h1>
         <p>This expert system helps you detect if you have Malaria or Typhod depending on your symptoms.</p>
         <p>Answer each question accurately to get a recommendation</p>
