@@ -46,9 +46,9 @@ function App() {
     if (stage >= stages.length - 1) {
       console.log('Finished', malariaCount, typhodCount);
       if (malariaCount > typhodCount) {
-        setVerdict('I think you have Malaria');
+        setVerdict('I think you have Malaria. Please consult your doctor for further diagnosis.');
       } else if (typhodCount > malariaCount) {
-        setVerdict('I think you have Typhod');
+        setVerdict('I think you have Typhod. Please consult your doctor for further diagnosis.');
       } else {
         setVerdict('Hmm, i couldnt deduce your condition. Please try again and answer more accurately');
       }
