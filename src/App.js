@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import { useEffect, useState } from 'react';
-import { Button } from 'antd';
-import { Radio } from 'antd';
+import { Button, Input, Form, Radio } from 'antd';
+
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
   ];
 
   const typhod = [
-    'coughing',
+    'cough',
     'appetite loss',
     'stomach pain',
     'weakness',
@@ -36,10 +36,11 @@ function App() {
 
   const stages = [...typhod, ...malaria];
 
-  const [stage, setStage] = useState(-1);
-  const [stageValue, setStageValue] = useState(undefined);
   const [malariaCount, setMalariaCount] = useState(0);
   const [typhodCount, setTyphodCount] = useState(0);
+
+  const [stage, setStage] = useState(-1);
+  const [stageValue, setStageValue] = useState(undefined);
   const [verdict, setVerdict] = useState(null);
 
   useEffect(() => {
@@ -100,7 +101,7 @@ function App() {
             <img src="/nile.jpeg" style={{ width: 100, height: 100 }} />
             <p>
               Anefu Peter Oche - 201123034
-          </p>
+            </p>
           </div>
           <p>
             Malaria/Typhod Expert System
@@ -112,9 +113,21 @@ function App() {
         <h1>Instruction</h1>
         <p>This expert system helps you detect if you have Malaria or Typhod depending on your symptoms.</p>
         <p>Answer each question accurately to get a recommendation</p>
-        <div>
-          <Button onClick={nextQuestion} type="primary">Start</Button>
+        <div style={{ width: '33%' }}>
+          <Form className={{ display: 'flex' }} onSubmitCapture={nextQuestion}>
+            <div style={{ marginBottom: 10 }}>
+              <Input placeholder="Fullname" required />
+            </div>
+
+            <div style={{ marginBottom: 10 }}>
+              <Input placeholder="Age" required />
+            </div>
+            <div>
+              <Button htmlType="submit" type="primary">Start</Button>
+            </div>
+          </Form>
         </div>
+
       </div>}
       {stage >= 0 && !verdict &&
         < div style={{ padding: 30 }}>
@@ -135,7 +148,7 @@ function App() {
           <h1 style={{ color: 'black' }}>Expert verdict: </h1>
           <p style={{ fontSize: 18, color: 'gray', fontWeight: 600 }}>{verdict}</p>
           <div>
-            <Button onClick={nextQuestion} type="primary">Take questionier again</Button>
+            <Button onClick={nextQuestion} type="primary">Take questionnaire again</Button>
           </div>
         </div>
       }
